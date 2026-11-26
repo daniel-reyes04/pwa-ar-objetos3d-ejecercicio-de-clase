@@ -1,9 +1,4 @@
-// instalar.ts — experiencia de instalación del Atlas 3D (Sesión 41).
-// Chrome decide CUÁNDO una PWA es instalable y avisa con el evento «beforeinstallprompt».
-// Ese evento se puede guardar y usar más tarde, dentro de un clic del usuario: así el
-// botón «Instalar» aparece solo cuando instalar es posible, y no antes.
 
-/** El evento no está en los tipos estándar de TypeScript: se declara lo que se usa. */
 interface EventoInstalacion extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
